@@ -1,0 +1,23 @@
+Source: zm-zcs-lib
+Section: mail
+Priority: optional
+Build-Depends: debhelper (>=9), ant, ant-contrib, git, ivy, zimbra-charset
+Standards-Version: 3.9.6
+Maintainer: Enrico Weigelt, metux IT consult <info@metux.net>
+Uploaders: Enrico Weigelt, metux IT consult <info@metux.net>
+
+Package: zimbra-common-core-libs
+Section: mail
+Priority: optional
+Architecture: any
+Depends: zimbra-charset, zimbra-ant-ziputil, zimbra-nekohtml,
+  zimbra-lib-ical4j, zimbra-antisamy, zimbra-ant-tar
+Description: LibreZimbra core jars
+
+Package: zimbra-mbox-store-libs
+Section: mail
+Priority: optional
+Architecture: any
+Depends: zimbra-charset, zimbra-ant-ziputil, zimbra-nekohtml,
+  zimbra-lib-ical4j, zimbra-antisamy, zimbra-html-sanitizer
+Description: LibreZimbra store jars
