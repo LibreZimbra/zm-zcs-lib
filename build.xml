@@ -1,5 +1,5 @@
 <project xmlns:ivy="antlib:org.apache.ivy.ant" name="zm-zcs-lib" default="dist">
-  <import file="../zm-zcs/ant-global.xml" />
+  <import file="ant-global.xml" />
 
 
   <target name="build-init">
