@@ -17,14 +17,11 @@
 
 
   <target name="jar" depends="init-ivy">
-    <ant antfile="../nekohtml-1.9.13/build.xml" inheritAll="false" target="jar" />
     <ant antfile="../ical4j-0.9.16-patched/build.xml" inheritAll="false" target="package" />
     <ant antfile="../java-html-sanitizer-release-20190610.1/build.xml" inheritAll="false" target="jar" />
     <ant antfile="../antisamy/build.xml" inheritAll="false" target="jar" />
-    <move file="../nekohtml-1.9.13/build/lib/nekohtml.jar" tofile="../nekohtml-1.9.13/build/lib/nekohtml-1.9.13.1z.jar"/>
     <move file="../ical4j-0.9.16-patched/build/ical4j.jar" tofile="../ical4j-0.9.16-patched/build/ical4j-0.9.16-patched.jar"/>
     <copy todir="${dist.dir}">
-      <fileset dir="../nekohtml-1.9.13/build/lib" includes="*.jar" />
       <fileset dir="../ical4j-0.9.16-patched/build" includes="*.jar" />
       <fileset dir="../java-html-sanitizer-release-20190610.1/build/lib" includes="*.jar" />
       <fileset dir="../antisamy/build/lib" includes="*.jar" />

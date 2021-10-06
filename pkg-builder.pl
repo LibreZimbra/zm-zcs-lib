@@ -78,7 +78,7 @@ my %PKG_GRAPH = (
       revision  => $revision,
       hard_deps => [],
       soft_deps => [],
-      other_deps => [ "zimbra-core-components", "zimbra-charset", "zimbra-ant-ziputil", "zimbra-ant-tar"],
+      other_deps => [ "zimbra-core-components", "zimbra-charset", "zimbra-ant-ziputil", "zimbra-ant-tar", zimbra-nekohtml"],
       replaces   => ["zimbra-core"],
       file_list  => ['/opt/zimbra/*'],
       stage_fun  => sub { &stage_zimbra_core_lib(@_); },
@@ -89,7 +89,7 @@ my %PKG_GRAPH = (
       revision  => $revision,
       hard_deps => [],
       soft_deps => [],
-      other_deps => [ "zimbra-store-components", "zimbra-charset", "zimbra-ant-ziputil"],
+      other_deps => [ "zimbra-store-components", "zimbra-charset", "zimbra-ant-ziputil", "zimbra-nekohtml"],
       replaces   => ["zimbra-store"],
       file_list  => ['/opt/zimbra/*'],
       stage_fun  => sub { &stage_zimbra_store_lib(@_); },
@@ -185,7 +185,6 @@ sub stage_zimbra_core_lib($)
         cpy_file("build/dist/mariadb-java-client-2.4.3.jar",                        "$stage_base_dir/opt/zimbra/lib/jars/mariadb-java-client-2.4.3.jar");
         cpy_file("build/dist/mina-core-2.0.4.jar",                                  "$stage_base_dir/opt/zimbra/lib/jars/mina-core-2.0.4.jar");
         cpy_file("build/dist/neethi-3.0.2.jar",                                     "$stage_base_dir/opt/zimbra/lib/jars/neethi-3.0.2.jar");
-        cpy_file("build/dist/nekohtml-1.9.13.1z.jar",                               "$stage_base_dir/opt/zimbra/lib/jars/nekohtml-1.9.13.1z.jar");
         cpy_file("build/dist/oauth-20100527.jar",                                   "$stage_base_dir/opt/zimbra/lib/jars/oauth-20100527.jar");
         cpy_file("build/dist/antisamy-1.5.8z2.jar",                                  "$stage_base_dir/opt/zimbra/lib/jars/antisamy-1.5.8z2.jar");
         cpy_file("build/dist/batik-css-1.7.jar",                                    "$stage_base_dir/opt/zimbra/lib/jars/batik-css-1.7.jar");
@@ -287,7 +286,6 @@ sub stage_zimbra_store_lib($)
        cpy_file("build/dist/xercesImpl-2.9.1-patch-01.jar",                         "$stage_base_dir/opt/zimbra/jetty_base/common/lib/xercesImpl-2.9.1-patch-01.jar");
        cpy_file("build/dist/yuicompressor-2.4.2-zimbra.jar",                        "$stage_base_dir/opt/zimbra/jetty_base/common/lib/yuicompressor-2.4.2-zimbra.jar");
        cpy_file("build/dist/ical4j-0.9.16-patched.jar",                             "$stage_base_dir/opt/zimbra/jetty_base/common/lib/ical4j-0.9.16-patched.jar");
-       cpy_file("build/dist/nekohtml-1.9.13.1z.jar",                                "$stage_base_dir/opt/zimbra/jetty_base/common/lib/nekohtml-1.9.13.1z.jar");
        cpy_file("build/dist/owasp-java-html-sanitizer-20190610.3z.jar",             "$stage_base_dir/opt/zimbra/jetty_base/common/lib/owasp-java-html-sanitizer-20190610.3z.jar");
        cpy_file("build/dist/zmzimbratozimbramig-8.7.jar",                           "$stage_base_dir/opt/zimbra/lib/jars/zmzimbratozimbramig.jar");
        cpy_file("build/dist/jcharset-2.0.jar",                                      "$stage_base_dir/opt/zimbra/jetty_base/common/endorsed/jcharset.jar");
