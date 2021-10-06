@@ -17,7 +17,6 @@
 
 
   <target name="jar" depends="init-ivy">
-    <ant antfile="../zm-charset/build.xml" inheritAll="false" target="publish-local" />
     <ant antfile="../ant-1.7.0-ziputil-patched/build.xml" inheritAll="false" target="jar" />
     <ant antfile="../ant-tar-patched/build.xml" inheritAll="false" target="jar" />
     <ant antfile="../nekohtml-1.9.13/build.xml" inheritAll="false" target="jar" />
@@ -40,10 +39,6 @@
     <delete>
       <fileset dir="${dist.dir}" excludes="*.jar" />
     </delete>
-    <copy todir="${dist.dir}">
-      <fileset dir="${dist.dir}" />
-      <globmapper from="zm-charset-*.jar" to="zimbra-charset.jar" />
-    </copy>
   </target>
 
 <!-- Property added to have the functionality of passing version as an argument  -->
