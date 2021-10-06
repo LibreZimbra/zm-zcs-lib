@@ -93,7 +93,7 @@ my %PKG_GRAPH = (
       soft_deps => [],
       other_deps => [ "zimbra-store-components", "zimbra-charset",
                       "zimbra-ant-ziputil", "zimbra-nekohtml",
-                      "zimbra-lib-ical4j" ],
+                      "zimbra-lib-ical4j", "zimbra-html-sanitizer" ],
       replaces   => ["zimbra-store"],
       file_list  => ['/opt/zimbra/*'],
       stage_fun  => sub { &stage_zimbra_store_lib(@_); },
@@ -288,7 +288,6 @@ sub stage_zimbra_store_lib($)
        cpy_file("build/dist/unboundid-ldapsdk-2.3.5.jar",                           "$stage_base_dir/opt/zimbra/jetty_base/common/lib/unboundid-ldapsdk-2.3.5.jar");
        cpy_file("build/dist/xercesImpl-2.9.1-patch-01.jar",                         "$stage_base_dir/opt/zimbra/jetty_base/common/lib/xercesImpl-2.9.1-patch-01.jar");
        cpy_file("build/dist/yuicompressor-2.4.2-zimbra.jar",                        "$stage_base_dir/opt/zimbra/jetty_base/common/lib/yuicompressor-2.4.2-zimbra.jar");
-       cpy_file("build/dist/owasp-java-html-sanitizer-20190610.3z.jar",             "$stage_base_dir/opt/zimbra/jetty_base/common/lib/owasp-java-html-sanitizer-20190610.3z.jar");
        cpy_file("build/dist/zmzimbratozimbramig-8.7.jar",                           "$stage_base_dir/opt/zimbra/lib/jars/zmzimbratozimbramig.jar");
        cpy_file("build/dist/jcharset-2.0.jar",                                      "$stage_base_dir/opt/zimbra/jetty_base/common/endorsed/jcharset.jar");
        cpy_file("build/dist/java-semver-0.9.0.jar",                                 "$stage_base_dir/opt/zimbra/jetty_base/common/lib/java-semver-0.9.0.jar");
