@@ -78,7 +78,9 @@ my %PKG_GRAPH = (
       revision  => $revision,
       hard_deps => [],
       soft_deps => [],
-      other_deps => [ "zimbra-core-components", "zimbra-charset", "zimbra-ant-ziputil", "zimbra-ant-tar", zimbra-nekohtml"],
+      other_deps => [ "zimbra-core-components", "zimbra-charset",
+                      "zimbra-ant-ziputil", "zimbra-ant-tar",
+                      "zimbra-nekohtml", "zimbra-lib-ical4j" ],
       replaces   => ["zimbra-core"],
       file_list  => ['/opt/zimbra/*'],
       stage_fun  => sub { &stage_zimbra_core_lib(@_); },
@@ -89,7 +91,9 @@ my %PKG_GRAPH = (
       revision  => $revision,
       hard_deps => [],
       soft_deps => [],
-      other_deps => [ "zimbra-store-components", "zimbra-charset", "zimbra-ant-ziputil", "zimbra-nekohtml"],
+      other_deps => [ "zimbra-store-components", "zimbra-charset",
+                      "zimbra-ant-ziputil", "zimbra-nekohtml",
+                      "zimbra-lib-ical4j" ],
       replaces   => ["zimbra-store"],
       file_list  => ['/opt/zimbra/*'],
       stage_fun  => sub { &stage_zimbra_store_lib(@_); },
@@ -138,7 +142,6 @@ sub stage_zimbra_core_lib($)
         cpy_file("build/dist/httpcore-4.4.11.jar",                                  "$stage_base_dir/opt/zimbra/lib/jars/httpcore-4.4.11.jar");
         cpy_file("build/dist/httpcore-nio-4.4.11.jar",                              "$stage_base_dir/opt/zimbra/lib/jars/httpcore-nio-4.4.11.jar");
         cpy_file("build/dist/httpmime-4.3.1.jar",                                   "$stage_base_dir/opt/zimbra/lib/jars/httpmime-4.3.1.jar");
-        cpy_file("build/dist/ical4j-0.9.16-patched.jar",                            "$stage_base_dir/opt/zimbra/lib/jars/ical4j-0.9.16-patched.jar");
         cpy_file("build/dist/icu4j-4.8.1.1.jar",                                    "$stage_base_dir/opt/zimbra/lib/jars/icu4j-4.8.1.1.jar");
         cpy_file("build/dist/jackson-core-2.10.1.jar",                              "$stage_base_dir/opt/zimbra/lib/jars/jackson-core-2.10.1.jar");
         cpy_file("build/dist/jackson-annotations-2.10.1.jar",                       "$stage_base_dir/opt/zimbra/lib/jars/jackson-annotations-2.10.1.jar");
@@ -285,7 +288,6 @@ sub stage_zimbra_store_lib($)
        cpy_file("build/dist/unboundid-ldapsdk-2.3.5.jar",                           "$stage_base_dir/opt/zimbra/jetty_base/common/lib/unboundid-ldapsdk-2.3.5.jar");
        cpy_file("build/dist/xercesImpl-2.9.1-patch-01.jar",                         "$stage_base_dir/opt/zimbra/jetty_base/common/lib/xercesImpl-2.9.1-patch-01.jar");
        cpy_file("build/dist/yuicompressor-2.4.2-zimbra.jar",                        "$stage_base_dir/opt/zimbra/jetty_base/common/lib/yuicompressor-2.4.2-zimbra.jar");
-       cpy_file("build/dist/ical4j-0.9.16-patched.jar",                             "$stage_base_dir/opt/zimbra/jetty_base/common/lib/ical4j-0.9.16-patched.jar");
        cpy_file("build/dist/owasp-java-html-sanitizer-20190610.3z.jar",             "$stage_base_dir/opt/zimbra/jetty_base/common/lib/owasp-java-html-sanitizer-20190610.3z.jar");
        cpy_file("build/dist/zmzimbratozimbramig-8.7.jar",                           "$stage_base_dir/opt/zimbra/lib/jars/zmzimbratozimbramig.jar");
        cpy_file("build/dist/jcharset-2.0.jar",                                      "$stage_base_dir/opt/zimbra/jetty_base/common/endorsed/jcharset.jar");
