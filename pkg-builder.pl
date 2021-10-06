@@ -78,7 +78,7 @@ my %PKG_GRAPH = (
       revision  => $revision,
       hard_deps => [],
       soft_deps => [],
-      other_deps => [ "zimbra-core-components", "zimbra-charset", "zimbra-ant-ziputil"],
+      other_deps => [ "zimbra-core-components", "zimbra-charset", "zimbra-ant-ziputil", "zimbra-ant-tar"],
       replaces   => ["zimbra-core"],
       file_list  => ['/opt/zimbra/*'],
       stage_fun  => sub { &stage_zimbra_core_lib(@_); },
@@ -104,7 +104,6 @@ sub stage_zimbra_core_lib($)
    my $stage_base_dir = shift;
 
         cpy_file("build/dist/ant-contrib-1.0b2.jar",                                "$stage_base_dir/opt/zimbra/lib/jars/ant-contrib-1.0b2.jar");
-        cpy_file("build/dist/ant-tar-patched.jar",                                  "$stage_base_dir/opt/zimbra/lib/jars/ant-tar-patched.jar");
         cpy_file("build/dist/antlr-3.2.jar",                                        "$stage_base_dir/opt/zimbra/lib/jars/antlr-3.2.jar");
         cpy_file("build/dist/apache-jsieve-core-0.5.jar",                           "$stage_base_dir/opt/zimbra/lib/jars/apache-jsieve-core-0.5.jar");
         cpy_file("build/dist/apache-log4j-extras-1.0.jar",                          "$stage_base_dir/opt/zimbra/lib/jars/apache-log4j-extras-1.0.jar");
