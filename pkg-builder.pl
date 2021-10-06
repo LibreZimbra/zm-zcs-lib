@@ -78,7 +78,7 @@ my %PKG_GRAPH = (
       revision  => $revision,
       hard_deps => [],
       soft_deps => [],
-      other_deps => [ "zimbra-core-components", "zimbra-charset"],
+      other_deps => [ "zimbra-core-components", "zimbra-charset", "zimbra-ant-ziputil"],
       replaces   => ["zimbra-core"],
       file_list  => ['/opt/zimbra/*'],
       stage_fun  => sub { &stage_zimbra_core_lib(@_); },
@@ -89,7 +89,7 @@ my %PKG_GRAPH = (
       revision  => $revision,
       hard_deps => [],
       soft_deps => [],
-      other_deps => [ "zimbra-store-components", "zimbra-charset"],
+      other_deps => [ "zimbra-store-components", "zimbra-charset", "zimbra-ant-ziputil"],
       replaces   => ["zimbra-store"],
       file_list  => ['/opt/zimbra/*'],
       stage_fun  => sub { &stage_zimbra_store_lib(@_); },
@@ -103,7 +103,6 @@ sub stage_zimbra_core_lib($)
 {
    my $stage_base_dir = shift;
 
-        cpy_file("build/dist/ant-1.7.0-ziputil-patched.jar",                        "$stage_base_dir/opt/zimbra/lib/jars/ant-1.7.0-ziputil-patched.jar");
         cpy_file("build/dist/ant-contrib-1.0b2.jar",                                "$stage_base_dir/opt/zimbra/lib/jars/ant-contrib-1.0b2.jar");
         cpy_file("build/dist/ant-tar-patched.jar",                                  "$stage_base_dir/opt/zimbra/lib/jars/ant-tar-patched.jar");
         cpy_file("build/dist/antlr-3.2.jar",                                        "$stage_base_dir/opt/zimbra/lib/jars/antlr-3.2.jar");
@@ -288,7 +287,6 @@ sub stage_zimbra_store_lib($)
        cpy_file("build/dist/unboundid-ldapsdk-2.3.5.jar",                           "$stage_base_dir/opt/zimbra/jetty_base/common/lib/unboundid-ldapsdk-2.3.5.jar");
        cpy_file("build/dist/xercesImpl-2.9.1-patch-01.jar",                         "$stage_base_dir/opt/zimbra/jetty_base/common/lib/xercesImpl-2.9.1-patch-01.jar");
        cpy_file("build/dist/yuicompressor-2.4.2-zimbra.jar",                        "$stage_base_dir/opt/zimbra/jetty_base/common/lib/yuicompressor-2.4.2-zimbra.jar");
-       cpy_file("build/dist/ant-1.7.0-ziputil-patched.jar",                         "$stage_base_dir/opt/zimbra/jetty_base/common/lib/ant-1.7.0-ziputil-patched.jar");
        cpy_file("build/dist/ical4j-0.9.16-patched.jar",                             "$stage_base_dir/opt/zimbra/jetty_base/common/lib/ical4j-0.9.16-patched.jar");
        cpy_file("build/dist/nekohtml-1.9.13.1z.jar",                                "$stage_base_dir/opt/zimbra/jetty_base/common/lib/nekohtml-1.9.13.1z.jar");
        cpy_file("build/dist/owasp-java-html-sanitizer-20190610.3z.jar",             "$stage_base_dir/opt/zimbra/jetty_base/common/lib/owasp-java-html-sanitizer-20190610.3z.jar");
