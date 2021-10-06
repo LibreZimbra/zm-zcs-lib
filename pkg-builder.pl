@@ -80,7 +80,8 @@ my %PKG_GRAPH = (
       soft_deps => [],
       other_deps => [ "zimbra-core-components", "zimbra-charset",
                       "zimbra-ant-ziputil", "zimbra-ant-tar",
-                      "zimbra-nekohtml", "zimbra-lib-ical4j" ],
+                      "zimbra-nekohtml", "zimbra-lib-ical4j",
+                      "zimbra-antisamy" ],
       replaces   => ["zimbra-core"],
       file_list  => ['/opt/zimbra/*'],
       stage_fun  => sub { &stage_zimbra_core_lib(@_); },
@@ -93,7 +94,8 @@ my %PKG_GRAPH = (
       soft_deps => [],
       other_deps => [ "zimbra-store-components", "zimbra-charset",
                       "zimbra-ant-ziputil", "zimbra-nekohtml",
-                      "zimbra-lib-ical4j", "zimbra-html-sanitizer" ],
+                      "zimbra-lib-ical4j", "zimbra-html-sanitizer",
+                      "zimbra-antisamy" ],
       replaces   => ["zimbra-store"],
       file_list  => ['/opt/zimbra/*'],
       stage_fun  => sub { &stage_zimbra_store_lib(@_); },
@@ -189,7 +191,6 @@ sub stage_zimbra_core_lib($)
         cpy_file("build/dist/mina-core-2.0.4.jar",                                  "$stage_base_dir/opt/zimbra/lib/jars/mina-core-2.0.4.jar");
         cpy_file("build/dist/neethi-3.0.2.jar",                                     "$stage_base_dir/opt/zimbra/lib/jars/neethi-3.0.2.jar");
         cpy_file("build/dist/oauth-20100527.jar",                                   "$stage_base_dir/opt/zimbra/lib/jars/oauth-20100527.jar");
-        cpy_file("build/dist/antisamy-1.5.8z2.jar",                                  "$stage_base_dir/opt/zimbra/lib/jars/antisamy-1.5.8z2.jar");
         cpy_file("build/dist/batik-css-1.7.jar",                                    "$stage_base_dir/opt/zimbra/lib/jars/batik-css-1.7.jar");
         cpy_file("build/dist/batik-i18n-1.9.jar",                                   "$stage_base_dir/opt/zimbra/lib/jars/batik-i18n-1.9.jar");
         cpy_file("build/dist/batik-util-1.8.jar",                                   "$stage_base_dir/opt/zimbra/lib/jars/batik-util-1.8.jar");
@@ -312,7 +313,6 @@ sub stage_zimbra_store_lib($)
        cpy_file("build/dist/commons-csv-1.2.jar",                                   "$stage_base_dir/opt/zimbra/jetty_base/common/lib/commons-csv-1.2.jar");
        cpy_file("build/dist/xz-1.9.jar",                                            "$stage_base_dir/opt/zimbra/jetty_base/common/lib/xz-1.9.jar");
        cpy_file("build/dist/saaj-impl-1.5.1.jar",                                   "$stage_base_dir/opt/zimbra/lib/ext-common/saaj-impl-1.5.1.jar");
-       cpy_file("build/dist/antisamy-1.5.8z2.jar",                                   "$stage_base_dir/opt/zimbra/jetty_base/webapps/service/WEB-INF/lib/antisamy-1.5.8z2.jar");
        cpy_file("build/dist/UserAgentUtils-1.21.jar",                               "$stage_base_dir/opt/zimbra/jetty_base/common/lib/UserAgentUtils-1.21.jar");
        cpy_file("build/dist/poi-4.1.2.jar",                                         "$stage_base_dir/opt/zimbra/jetty_base/common/lib/poi-4.1.2.jar");
        cpy_file("build/dist/poi-ooxml-4.1.2.jar",                                   "$stage_base_dir/opt/zimbra/jetty_base/common/lib/poi-ooxml-4.1.2.jar");
