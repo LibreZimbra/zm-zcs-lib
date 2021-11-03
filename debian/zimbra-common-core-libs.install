@@ -61,11 +61,6 @@ build/dist/jfreechart-1.0.15.jar                      /opt/zimbra/lib/jars/
 build/dist/jna-3.4.0.jar                              /opt/zimbra/lib/jars/
 build/dist/jsr181-api-1.0-MR1.jar                     /opt/zimbra/lib/jars/
 build/dist/jsr311-api-1.1.1.jar                       /opt/zimbra/lib/jars/
-build/dist/junixsocket-common-2.3.2.jar               /opt/zimbra/lib/jars/
-build/dist/junixsocket-demo-2.3.2.jar                 /opt/zimbra/lib/jars/
-build/dist/junixsocket-mysql-2.3.2.jar                /opt/zimbra/lib/jars/
-build/dist/junixsocket-rmi-2.3.2.jar                  /opt/zimbra/lib/jars/
-build/dist/junixsocket-native-common-2.3.2.jar        /opt/zimbra/lib/jars/
 build/dist/native-lib-loader-2.3.5.jar                /opt/zimbra/lib/jars/
 build/dist/jython-standalone-2.5.2.jar                /opt/zimbra/lib/jars/
 build/dist/jline-0.9.93.jar                           /opt/zimbra/lib/jars/

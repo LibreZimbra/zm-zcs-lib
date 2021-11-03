@@ -34,10 +34,6 @@ build/dist/jdom-1.1.jar                               /opt/zimbra/jetty_base/com
 build/dist/jfreechart-1.0.15.jar                      /opt/zimbra/jetty_base/common/lib/
 build/dist/json-20090211.jar                          /opt/zimbra/jetty_base/common/lib/
 build/dist/jtnef-1.9.0.jar                            /opt/zimbra/jetty_base/common/lib/
-build/dist/junixsocket-common-2.3.2.jar               /opt/zimbra/jetty_base/common/lib/
-build/dist/junixsocket-demo-2.3.2.jar                 /opt/zimbra/jetty_base/common/lib/
-build/dist/junixsocket-mysql-2.3.2.jar                /opt/zimbra/jetty_base/common/lib/
-build/dist/junixsocket-rmi-2.3.2.jar                  /opt/zimbra/jetty_base/common/lib/
 build/dist/jzlib-1.0.7.jar                            /opt/zimbra/jetty_base/common/lib/
 build/dist/libidn-1.24.jar                            /opt/zimbra/jetty_base/common/lib/
 build/dist/log4j-1.2.16.jar                           /opt/zimbra/jetty_base/common/lib/
