@@ -92,7 +92,7 @@ my %PKG_GRAPH = (
       revision  => $revision,
       hard_deps => [],
       soft_deps => [],
-      other_deps => [ "zimbra-store-components", "zimbra-charset",
+      other_deps => [ "zimbra-store-base", "zimbra-charset",
                       "zimbra-ant-ziputil", "zimbra-nekohtml",
                       "zimbra-lib-ical4j", "zimbra-html-sanitizer",
                       "zimbra-antisamy" ],
