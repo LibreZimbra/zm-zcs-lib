@@ -17,7 +17,6 @@
 
 
   <target name="jar" depends="init-ivy">
-    <ivy:install organisation="zimbra" module="zm-charset" revision="latest.integration" settingsRef="dev.settings" from="chain-resolver" to="build-dist" overwrite="true" transitive="true" type="jar" />
     <ivy:install organisation="log4j" module="log4j" revision="1.2.16" settingsRef="dev.settings" from="chain-resolver" to="build-dist" overwrite="true" transitive="true" type="jar" />
     <ivy:install organisation="zimbra"  module="zmzimbratozimbramig" revision="8.7" settingsRef="dev.settings" from="chain-resolver" to="build-dist" overwrite="true" transitive="true" type="jar" />
     <delete>

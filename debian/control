@@ -1,7 +1,7 @@
 Source: zm-zcs-lib
 Section: mail
 Priority: optional
-Build-Depends: debhelper (>=9), ant, ant-contrib, git, ivy, zimbra-charset
+Build-Depends: debhelper (>=9), ant, ant-contrib, git, ivy
 Standards-Version: 3.9.6
 Maintainer: Enrico Weigelt, metux IT consult <info@metux.net>
 Uploaders: Enrico Weigelt, metux IT consult <info@metux.net>
