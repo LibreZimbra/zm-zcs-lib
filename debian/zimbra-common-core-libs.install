@@ -1,7 +1,6 @@
 build/dist/ant-contrib-1.0b2.jar                      /opt/zimbra/lib/jars/
 build/dist/antlr-3.2.jar                              /opt/zimbra/lib/jars/
 build/dist/apache-jsieve-core-0.5.jar                 /opt/zimbra/lib/jars/
-build/dist/apache-log4j-extras-1.0.jar                /opt/zimbra/lib/jars/
 build/dist/asm-8.0.1.jar                              /opt/zimbra/lib/jars/
 build/dist/bcprov-jdk15on-1.64.jar                    /opt/zimbra/lib/jars/
 build/dist/commons-cli-1.2.jar                        /opt/zimbra/lib/jars/

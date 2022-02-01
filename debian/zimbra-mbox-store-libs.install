@@ -2,7 +2,6 @@ build/dist/bcpkix-jdk15on-1.64.jar                    /opt/zimbra/jetty_base/com
 build/dist/bcmail-jdk15on-1.64.jar                    /opt/zimbra/lib/ext-common/
 build/dist/zmzimbratozimbramig-8.7.jar                /opt/zimbra/lib/jars/
 build/dist/jcharset-2.0.jar                           /opt/zimbra/jetty_base/common/endorsed/
-build/dist/apache-log4j-extras-1.0.jar                /opt/zimbra/jetty_base/common/lib/
 build/dist/bcprov-jdk15on-1.64.jar                    /opt/zimbra/jetty_base/common/lib/
 build/dist/commons-cli-1.2.jar                        /opt/zimbra/jetty_base/common/lib/
 build/dist/commons-codec-1.14.jar                     /opt/zimbra/jetty_base/common/lib/
