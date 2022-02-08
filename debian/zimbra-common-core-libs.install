@@ -111,5 +111,4 @@ build/dist/istack-commons-runtime-3.0.8.jar           /opt/zimbra/lib/jars/
 build/dist/resolver-20050927.jar                      /opt/zimbra/lib/jars/
 build/dist/javax.annotation-api-1.2.jar               /opt/zimbra/lib/jars/
 build/dist/apache-jsp-9.4.18.v20190429.jar            /opt/zimbra/lib/jars/
-build/dist/UserAgentUtils-1.21.jar                    /opt/zimbra/lib/jars/
 build/dist/tika-core-1.24.1.jar                       /opt/zimbra/lib/jars/
